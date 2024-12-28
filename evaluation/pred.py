@@ -26,7 +26,7 @@ def parse_args(args=None):
     parser.add_argument('--len', "-l", type=int, default=None)
     parser.add_argument("--window_size", "-ws", type=int, default=3, help="Window size for HopFormer")
     parser.add_argument("--sim_threshold", "-st", type=float, default=20.0, help="Similarity threshold for HopFormer")
-    parser.add_argument("--num_attn_sinks", "-snks", type=float, default=0, help="Similarity threshold for HopFormer")
+    parser.add_argument("--num_attn_sinks", "-snks", type=float, default=0, help="Attention sinks (streaming LLM)")
     parser.add_argument("--gumbel", "-gbl", action='store_true', help="use gumbel softmax")
     parser.add_argument("--no_hopf", action='store_true', help="Disable HopFormer")  # Updated line
     parser.add_argument("--save_wts", action='store_true', help="Save attn wts")  # Updated line

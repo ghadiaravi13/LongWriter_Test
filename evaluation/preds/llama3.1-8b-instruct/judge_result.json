@@ -1,0 +1,20 @@
+{
+    "preds_ws3_st20.0_snks0_hopf_False_type_max_fused_lenNone_gblFalse": {
+        "Relevance": 86.25,
+        "Accuracy": 83.33333333333333,
+        "Coherence": 65.41666666666667,
+        "Clarity": 72.91666666666666,
+        "Breadth and Depth": 55.833333333333336,
+        "Reading Experience": 55.41666666666667,
+        "total": 69.8611111111111
+    },
+    "preds_ws5_st50.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": {
+        "Relevance": 81.66666666666667,
+        "Accuracy": 76.25,
+        "Coherence": 55.41666666666667,
+        "Clarity": 65.0,
+        "Breadth and Depth": 56.25,
+        "Reading Experience": 50.416666666666664,
+        "total": 64.16666666666667
+    }
+}
