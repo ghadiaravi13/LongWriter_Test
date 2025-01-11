@@ -21,7 +21,7 @@ cache_dir = "/work/10198/ghadiaravi13/ls6/HopFormer/HF_Llama3/HF_cache/"
 
 def parse_args(args=None):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, default=None, choices=["mistral","qwen-2.5-7b-instruct","llama3.1-8b-instruct","llama2-7b-chat-4k", "llama-2-7B-32k-instruct", "longchat-v1.5-7b-32k", "xgen-7b-8k", "internlm-7b-8k", "chatglm2-6b", "chatglm2-6b-32k", "chatglm3-6b-32k", "vicuna-v1.5-7b-16k"])
+    parser.add_argument('--model', type=str, default=None, choices=["phi4","mistral","qwen-2.5-7b-instruct","llama3.1-8b-instruct","llama2-7b-chat-4k", "llama-2-7B-32k-instruct", "longchat-v1.5-7b-32k", "xgen-7b-8k", "internlm-7b-8k", "chatglm2-6b", "chatglm2-6b-32k", "chatglm3-6b-32k", "vicuna-v1.5-7b-16k"])
     parser.add_argument('--hopf_type', type=str, default="max_fused")
     parser.add_argument('--len', "-l", type=int, default=None)
     parser.add_argument("--window_size", "-ws", type=int, default=3, help="Window size for HopFormer")
@@ -70,17 +70,27 @@ def get_pred(data, path, max_new_tokens, temperature, tokenizer, fout, args):
     with torch.no_grad():
         for dt in tqdm(data):
             prompt = dt['prompt']
-            if "llama" in path.lower() or "mistral" in path.lower():
+            if "llama" in path.lower() or "mistral" in path.lower() or "phi" in path.lower():
                 prompt = f"[INST]{prompt}[/INST]"
                 input = tokenizer(prompt, truncation=False, return_tensors="pt").to(device)
                 context_length = input.input_ids.shape[-1]
-                output = model.generate(
-                    **input,
-                    max_new_tokens=min(max_new_tokens,dt['length']*2),
-                    num_beams=1,
-                    do_sample=True,
-                    temperature=temperature,
-                )[0]
+                if "phi" in path.lower():
+                    output = model.generate(
+                        **input,
+                        max_new_tokens=min(max_new_tokens,dt['length']*2),
+                        num_beams=1,
+                        do_sample=True,
+                        temperature=temperature,
+                        min_length=context_length+1,
+                    )[0]
+                else:
+                    output = model.generate(
+                        **input,
+                        max_new_tokens=min(max_new_tokens,dt['length']*2),
+                        num_beams=1,
+                        do_sample=True,
+                        temperature=temperature
+                    )[0]
                 response = tokenizer.decode(output[context_length:], skip_special_tokens=True)
             else:
                 response, history = model.chat(tokenizer, prompt, history=[], max_new_tokens=max_new_tokens, temperature=temperature)
@@ -102,7 +112,7 @@ def seed_everything(seed):
 if __name__ == '__main__':
     seed_everything(42)
     args = parse_args()
-    model2path = json.load(open('/work/10198/ghadiaravi13/ls6/HopFormer/LongBench_Test/config/model2path.json','r'))
+    model2path = json.load(open('/work/10198/ghadiaravi13/vista/HopFormer/LongBench_Test/config/model2path.json','r'))
     model_name = args.model#'LongWriter-glm4-9b' # LongWriter-llama3.1-8b
     path = model2path[model_name]#"THUDM/LongWriter-glm4-9b" # THUDM/LongWriter-llama3.1-8b
     os.makedirs(f"preds/{model_name}", exist_ok=True)
