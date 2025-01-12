@@ -21,7 +21,7 @@ cache_dir = "/work/10198/ghadiaravi13/ls6/HopFormer/HF_Llama3/HF_cache/"
 
 def parse_args(args=None):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, default=None, choices=["phi4","mistral","qwen-2.5-7b-instruct","llama3.1-8b-instruct","llama2-7b-chat-4k", "llama-2-7B-32k-instruct", "longchat-v1.5-7b-32k", "xgen-7b-8k", "internlm-7b-8k", "chatglm2-6b", "chatglm2-6b-32k", "chatglm3-6b-32k", "vicuna-v1.5-7b-16k"])
+    parser.add_argument('--model', type=str, default=None, choices=["phi4-unsloth","phi4","mistral","qwen2.5","llama3.1-8b-instruct","llama2-7b-chat-4k", "llama-2-7B-32k-instruct", "longchat-v1.5-7b-32k", "xgen-7b-8k", "internlm-7b-8k", "chatglm2-6b", "chatglm2-6b-32k", "chatglm3-6b-32k", "vicuna-v1.5-7b-16k"])
     parser.add_argument('--hopf_type', type=str, default="max_fused")
     parser.add_argument('--len', "-l", type=int, default=None)
     parser.add_argument("--window_size", "-ws", type=int, default=3, help="Window size for HopFormer")
@@ -70,7 +70,7 @@ def get_pred(data, path, max_new_tokens, temperature, tokenizer, fout, args):
     with torch.no_grad():
         for dt in tqdm(data):
             prompt = dt['prompt']
-            if "llama" in path.lower() or "mistral" in path.lower() or "phi" in path.lower():
+            if "llama" in path.lower() or "mistral" in path.lower() or "phi" in path.lower() or "qwen" in path.lower():
                 prompt = f"[INST]{prompt}[/INST]"
                 input = tokenizer(prompt, truncation=False, return_tensors="pt").to(device)
                 context_length = input.input_ids.shape[-1]
