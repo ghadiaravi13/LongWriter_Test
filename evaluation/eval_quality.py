@@ -7,6 +7,8 @@ from tqdm import tqdm
 import re
 import argparse
 import os
+import pandas as pd
+from plotly import express as px
 
 def parse_args(args=None):
     parser = argparse.ArgumentParser()
@@ -112,6 +114,11 @@ def process_data(items, fout):
 
 res_path = f"preds/{model_name}/"
 result = dict()
+score_df = dict()
+score_df['resp_len'] = []
+score_df['id'] = []
+for dim in dims:
+    score_df[dim] = []
 for file in os.listdir(res_path):
     if "judge" in file or "log" in file or "png" in file or "result" in file:
         continue
@@ -138,12 +145,28 @@ for file in os.listdir(res_path):
     # fout.close()
 
     all_scores = [json.loads(line)['scores'] for line in open(f"{res_path}{file[:-6]}_judge.jsonl", 'r', encoding='utf-8')]
+    all_lens = [json.loads(line)['response_length'] for line in open(f"{res_path}{file[:-6]}_judge.jsonl", 'r', encoding='utf-8')]
 
     total_score = dict()
+    score_df['resp_len'].extend(all_lens)
+    score_df['id'].extend([file[:-6]]*len(all_lens))
     for dim in dims:
         scores = [float(score[dim]) if dim in score else 3 for score in all_scores]
+        score_df[dim].extend(scores)
         total_score[dim] = ((sum(scores) / len(scores)) - 1) * 25
     total_score['total'] = sum(total_score.values()) / len(total_score)
     result[file[:-6]] = total_score
 
 json.dump(result, open(f"preds/{model_name}/judge_result.json","w"), ensure_ascii=False, indent=4)
+
+pd.DataFrame(result).transpose().to_csv(f"preds/{model_name}/judge_result.csv")
+
+score_df = pd.DataFrame(score_df)
+
+# fig = px.scatter(score_df, x = 'resp_len', y=dims, color='id')
+for dim in dims:
+    fig = px.histogram(score_df, x=dim, color='id')
+    fig.update_layout(barmode='overlay')
+    # Reduce opacity to see both histograms
+    fig.update_traces(opacity=0.75)
+    fig.write_html(f"preds/{model_name}/judge_scores_hist_{dim}.html")
