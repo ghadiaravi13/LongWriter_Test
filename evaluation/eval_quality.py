@@ -32,27 +32,34 @@ model_name = args.model
 
 prompt_template = open("judge.txt", "r", encoding="utf-8").read()
 
-GPT4_API_KEY = 'Mue2YhdKumdycUEzCQjeiVPzOJD0FEPN' # Your API Key
-GPT_MODEL = 'mistral-large-latest'
+model_keys = {"gpt-4o-2024-05-13":"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",
+              "mistral-large-latest": "Mue2YhdKumdycUEzCQjeiVPzOJD0FEPN"}
+model_link = {"gpt-4o-2024-05-13": "https://api.openai.com/v1/chat/completions",
+              "mistral-large-latest": "https://api.mistral.ai/v1/chat/completions"}
+
+GPT_MODEL = "gpt-4o-2024-05-13"#'mistral-large-latest'
+GPT4_API_KEY = model_keys[GPT_MODEL]#'Mue2YhdKumdycUEzCQjeiVPzOJD0FEPN' # Your API Key
+
 def get_response_gpt4(prompt, temperature=0.5, max_new_tokens=1024, stop=None):
     tries = 0
     while tries < 10:
         # import pdb; pdb.set_trace()
         tries += 1
         try:
-            # headers = {
-            #     'Authorization': "Bearer {}".format(GPT4_API_KEY),
-            # }
             headers = {
-                "Authorization": f"Bearer {GPT4_API_KEY}",
-                "Accept": "application/json",
-                "Content-Type": "application/json"
+                'Authorization': "Bearer {}".format(GPT4_API_KEY),
             }
+            if 'mistral' in GPT_MODEL:
+                headers = {
+                    "Authorization": f"Bearer {GPT4_API_KEY}",
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                }
             messages = [
                 {'role': 'user', 'content': prompt},
             ]
-            #https://api.openai.com/v1/chat/completions
-            resp = requests.post("https://api.mistral.ai/v1/chat/completions", json = { 
+
+            resp = requests.post(model_link[GPT_MODEL], json = { 
                 "model": GPT_MODEL,
                 "messages": messages,
                 "temperature": temperature,
