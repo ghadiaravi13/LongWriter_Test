@@ -32,7 +32,8 @@ model_name = args.model
 
 prompt_template = open("judge.txt", "r", encoding="utf-8").read()
 
-model_keys = {"gpt-4o-2024-05-13":"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",
+gpt_api_key = open("/work/10198/ghadiaravi13/vista/HopFormer/open_ai_api.txt","r").readlines()[0]
+model_keys = {"gpt-4o-2024-05-13":gpt_api_key,
               "mistral-large-latest": "Mue2YhdKumdycUEzCQjeiVPzOJD0FEPN"}
 model_link = {"gpt-4o-2024-05-13": "https://api.openai.com/v1/chat/completions",
               "mistral-large-latest": "https://api.mistral.ai/v1/chat/completions"}

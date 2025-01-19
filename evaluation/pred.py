@@ -52,13 +52,22 @@ def get_pred(data, path, max_new_tokens, temperature, tokenizer, fout, args):
     config._attn_implementation = "flash_attention_2"
     if args.hopf_type=='indp':
         assert args.window_size==1, "Window size > 1 is not supported for independent Hopformer. Try 'max_fused' instead"
-    config.hopformer = None if args.no_hopf else {
+    config.hopformer = None if args.no_hopf or args.hopf_type=="snapkv" else {
         'window_size': int(args.window_size),
         'sim_threshold': int(args.sim_threshold),
         'softmax': 'gumbel' if args.gumbel else 'normal',
         'num_attn_sinks': int(args.num_attn_sinks),
         'hopf_type': args.hopf_type
     }
+    print(f"Hopformer is: {config.hopformer}")
+    if args.hopf_type=="snapkv":
+        config.snapkv = True
+        config.window_size = args.window_size
+        config.max_capacity_prompt = args.sim_threshold
+        config.kernel_size = 5
+        config.pooling = "avgpool"
+    else:
+        config.snapkv = False
 
     # Load the model with the custom configuration
     model = AutoModelForCausalLM.from_pretrained(path,
