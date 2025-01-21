@@ -31,7 +31,7 @@ def parse(args,dataset=""):
             run_name = file.split("/")[-1][:-4]
             
             n_attn_heads = key_heads_dict[model]
-            n_key_heads = key_heads_dict[model]
+            n_key_heads = key_heads_dict[model] if "no_hopf" in file else n_attn_heads
             n_layers = layers_dict[model]
             hid_dim_per_head = hid_dim_dict[model]
             
@@ -54,12 +54,12 @@ def parse(args,dataset=""):
                     if "hopf_False" in file:
                         data[run_name]['inp_size'].append(int(l.split("Input size: ")[1].split(" ")[0]))
                         data[run_name]['out_size'].append(int(l.split("key': ")[1].split(",")[0]) - int(l.split("Input size: ")[1].split(" ")[0]))
-                    data[run_name]['resp_len'].append(json.loads(res[i])['response_length'])
+                    data[run_name]['resp_len'].append(int(l.split("len': ")[1].split("}")[0]))
                     data[run_name]['KV_size'].append(4 * hid_dim_per_head * n_key_heads * n_layers * int(l.split("key': ")[1].split(",")[0]) / 1000000)
                     # if "hopf_False" in file:
                     #     data[run_name]['attn_size'].append(4 * n_attn_heads * n_layers * data[run_name]['out_size'][i] * int(l.split("attn_wts': ")[1].split("}")[0]) / 1000000)
                     # else:
-                    data[run_name]['attn_size'].append(4 * n_attn_heads * n_layers * data[run_name]['resp_len'][i] * int(l.split("attn_wts': ")[1].split("}")[0]) / 1000000)
+                    data[run_name]['attn_size'].append(4 * n_attn_heads * n_layers * data[run_name]['resp_len'][i] * int(l.split("attn_wts': ")[1].split(",")[0]) / 1000000)
                     data[run_name]['total_cache'].append(data[run_name]['KV_size'][-1] + data[run_name]['attn_size'][-1])
                     last_time = curr_time
                     i+=1

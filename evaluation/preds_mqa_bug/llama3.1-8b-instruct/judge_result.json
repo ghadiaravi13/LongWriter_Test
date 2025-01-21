@@ -1,0 +1,38 @@
+{
+    "preds_ws3_st20.0_snks0_hopf_False_type_max_fused_lenNone_gblFalse": {
+        "Relevance": 86.25,
+        "Accuracy": 82.08333333333333,
+        "Coherence": 60.83333333333333,
+        "Clarity": 69.16666666666667,
+        "Breadth and Depth": 49.16666666666667,
+        "Reading Experience": 52.916666666666664,
+        "total": 66.73611111111111
+    },
+    "preds_ws10_st50.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": {
+        "Relevance": 86.66666666666667,
+        "Accuracy": 86.66666666666667,
+        "Coherence": 61.25000000000001,
+        "Clarity": 70.83333333333334,
+        "Breadth and Depth": 55.833333333333336,
+        "Reading Experience": 52.083333333333336,
+        "total": 68.88888888888889
+    },
+    "preds_ws5_st10.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": {
+        "Relevance": 61.25000000000001,
+        "Accuracy": 70.0,
+        "Coherence": 37.916666666666664,
+        "Clarity": 49.583333333333336,
+        "Breadth and Depth": 42.50000000000001,
+        "Reading Experience": 32.08333333333333,
+        "total": 48.888888888888886
+    },
+    "preds_ws10_st511.0_snks0_hopf_True_type_snapkv_lenNone_gblFalse": {
+        "Relevance": 85.37735849056605,
+        "Accuracy": 85.84905660377358,
+        "Coherence": 64.62264150943396,
+        "Clarity": 74.05660377358491,
+        "Breadth and Depth": 51.41509433962265,
+        "Reading Experience": 54.24528301886793,
+        "total": 69.26100628930818
+    }
+}

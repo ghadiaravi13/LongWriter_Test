@@ -1,0 +1,29 @@
+{
+    "preds_ws3_st20.0_ea1.0_snks0_hopf_False_type_max_fused_lenNone_gblFalse": {
+        "Relevance": 86.44067796610169,
+        "Accuracy": 73.72881355932203,
+        "Coherence": 59.7457627118644,
+        "Clarity": 63.13559322033898,
+        "Breadth and Depth": 66.94915254237289,
+        "Reading Experience": 58.47457627118644,
+        "total": 68.07909604519774
+    },
+    "preds_ws30_st630.0_ea1.0_snks0_hopf_True_type_snapkv_lenNone_gblFalse": {
+        "Relevance": 86.01694915254237,
+        "Accuracy": 68.64406779661016,
+        "Coherence": 55.932203389830505,
+        "Clarity": 58.47457627118644,
+        "Breadth and Depth": 65.67796610169492,
+        "Reading Experience": 54.23728813559322,
+        "total": 64.83050847457626
+    },
+    "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": {
+        "Relevance": 85.41666666666667,
+        "Accuracy": 70.83333333333334,
+        "Coherence": 60.416666666666664,
+        "Clarity": 62.083333333333336,
+        "Breadth and Depth": 67.91666666666667,
+        "Reading Experience": 57.08333333333333,
+        "total": 67.29166666666667
+    }
+}

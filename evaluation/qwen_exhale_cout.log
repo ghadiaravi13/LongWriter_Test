@@ -1,0 +1,929 @@
+Hopformer is: {'window_size': 10, 'sim_threshold': 50, 'softmax': 'normal', 'num_attn_sinks': 0, 'hopf_type': 'max_fused', 'exhale_after': 1.5}
+Offloaded Cache....
+........Input size: 29 KV Cache size: {'key': 228, 'value': 228, 'attn_wts': 10, 'len': 228}...........GPU Max Reserved: 15.453913088 GB
+
+Offloaded Cache....
+........Input size: 29 KV Cache size: {'key': 228, 'value': 228, 'attn_wts': 10, 'len': 228}...........GPU Max Reserved: 15.45601024 GB
+
+Offloaded Cache....
+........Input size: 27 KV Cache size: {'key': 326, 'value': 326, 'attn_wts': 10, 'len': 326}...........GPU Max Reserved: 15.460204544 GB
+
+Offloaded Cache....
+........Input size: 32 KV Cache size: {'key': 422, 'value': 422, 'attn_wts': 10, 'len': 422}...........GPU Max Reserved: 15.460204544 GB
+
+Offloaded Cache....
+........Input size: 33 KV Cache size: {'key': 432, 'value': 432, 'attn_wts': 10, 'len': 432}...........GPU Max Reserved: 15.462301696 GB
+
+Offloaded Cache....
+........Input size: 31 KV Cache size: {'key': 295, 'value': 295, 'attn_wts': 10, 'len': 295}...........GPU Max Reserved: 15.462301696 GB
+
+Offloaded Cache....
+Evicting at KV Size: 511
+........Input size: 20 KV Cache size: {'key': 619, 'value': 619, 'attn_wts': 10, 'len': 619}...........GPU Max Reserved: 15.464398848 GB
+
+Offloaded Cache....
+........Input size: 43 KV Cache size: {'key': 642, 'value': 642, 'attn_wts': 10, 'len': 642}...........GPU Max Reserved: 15.464398848 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 40 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 839}...........GPU Max Reserved: 15.468593152 GB
+
+Offloaded Cache....
+........Input size: 38 KV Cache size: {'key': 754, 'value': 754, 'attn_wts': 10, 'len': 754}...........GPU Max Reserved: 15.468593152 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 80 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 879}...........GPU Max Reserved: 15.468593152 GB
+
+Offloaded Cache....
+........Input size: 168 KV Cache size: {'key': 676, 'value': 676, 'attn_wts': 10, 'len': 676}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 112 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 911}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 64 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 863}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 59 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 858}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 29 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 828}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 93 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 892}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 111 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1110}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 99 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 949}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 143 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 808}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 27 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1026}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 77 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1076}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 104 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1303}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 17 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1216}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 46 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 898}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 22 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1221}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 65 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1664}...........GPU Max Reserved: 15.48746752 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 339 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 819}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 22 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1621}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 54 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1653}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 34 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 2033}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 24 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1824}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+........Input size: 58 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 998}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 71 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 2470}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 317 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 2331}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 37 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1112}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 63 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1367}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 49 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 4048}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 242 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 4241}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 79 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 3317}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 44 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 3199}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 32 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 5031}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 53 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 5052}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 36 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 5635}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 19 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 6018}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 30 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 6029}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 38 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 2377}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 30 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 5733}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 26 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 3197}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 17 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 8016}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 19 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 10018}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 59 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 10058}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 64 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 2319}...........GPU Max Reserved: 15.495856128 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 512 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 7820}...........GPU Max Reserved: 15.55038208 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 45 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 10401}...........GPU Max Reserved: 15.55038208 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 66 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 1882}...........GPU Max Reserved: 15.55038208 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 27 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 20026}...........GPU Max Reserved: 15.55038208 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 55 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 20054}...........GPU Max Reserved: 15.55038208 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 341 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 20125}...........GPU Max Reserved: 15.55038208 GB
+
+Offloaded Cache....
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+Evicting at KV Size: 767
+........Input size: 83 KV Cache size: {'key': 766, 'value': 766, 'attn_wts': 10, 'len': 24082}...........GPU Max Reserved: 15.55038208 GB
+

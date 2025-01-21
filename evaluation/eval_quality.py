@@ -38,7 +38,7 @@ model_keys = {"gpt-4o-2024-05-13":gpt_api_key,
 model_link = {"gpt-4o-2024-05-13": "https://api.openai.com/v1/chat/completions",
               "mistral-large-latest": "https://api.mistral.ai/v1/chat/completions"}
 
-GPT_MODEL = "gpt-4o-2024-05-13"#'mistral-large-latest'
+GPT_MODEL = 'mistral-large-latest'#"gpt-4o-2024-05-13"#
 GPT4_API_KEY = model_keys[GPT_MODEL]#'Mue2YhdKumdycUEzCQjeiVPzOJD0FEPN' # Your API Key
 
 def get_response_gpt4(prompt, temperature=0.5, max_new_tokens=1024, stop=None):
@@ -70,7 +70,8 @@ def get_response_gpt4(prompt, temperature=0.5, max_new_tokens=1024, stop=None):
             if resp.status_code != 200:
                 raise Exception(resp.text)
             resp = resp.json()
-            # time.sleep(60)
+            if "gpt" in GPT_MODEL:
+                time.sleep(5)
             break
         except KeyboardInterrupt as e:
             raise e
@@ -128,6 +129,10 @@ score_df['id'] = []
 for dim in dims:
     score_df[dim] = []
 for file in os.listdir(res_path):
+    if "judge" in file and "snapkv" in file:
+        snapkv_prompts = [json.loads(line)['prompt'] for line in open(res_path+file,"r").readlines()]
+
+for file in os.listdir(res_path):
     if "judge" in file or "log" in file or "png" in file or "result" in file:
         continue
     try:
@@ -148,13 +153,24 @@ for file in os.listdir(res_path):
         print("Using LLM Judge!\n")
         fout = open(f"{res_path}{file[:-6]}_judge.jsonl", 'w', encoding='utf-8')
         process_data(data, fout)
+    else:
+        print("Using LLM Judge for leftovers!\n")
+        eval_prompts = [json.loads(line)['prompt'] for line in open(f"{res_path}{file[:-6]}_judge.jsonl", 'r', encoding='utf-8').readlines()]
+        left_data = []
+        for d in data:
+            if d['prompt'] not in eval_prompts:
+                left_data.append(d)
+        fout = open(f"{res_path}{file[:-6]}_judge.jsonl", 'a', encoding='utf-8')
+        process_data(left_data,fout)
     # pool.close()
     # pool.join()
     # fout.close()
 
-    all_scores = [json.loads(line)['scores'] for line in open(f"{res_path}{file[:-6]}_judge.jsonl", 'r', encoding='utf-8')]
-    all_lens = [json.loads(line)['response_length'] for line in open(f"{res_path}{file[:-6]}_judge.jsonl", 'r', encoding='utf-8')]
-
+    all_data = sorted([(json.loads(line)['scores'],json.loads(line)['response_length'], json.loads(line)['prompt']) for line in open(f"{res_path}{file[:-6]}_judge.jsonl", 'r', encoding='utf-8')],key = lambda x: x[1])# not in snapkv_prompts)
+    all_scores = [d[0] for d in all_data]
+    all_lens = [d[1] for d in all_data]
+    # all_lens = [json.loads(line)['response_length'] for line in open(f"{res_path}{file[:-6]}_judge.jsonl", 'r', encoding='utf-8')][:53]
+    
     total_score = dict()
     score_df['resp_len'].extend(all_lens)
     score_df['id'].extend([file[:-6]]*len(all_lens))

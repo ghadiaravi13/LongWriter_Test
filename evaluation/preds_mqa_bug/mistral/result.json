@@ -1,0 +1,8 @@
+{
+    "preds_ws3_st20.0_snks0_hopf_False_type_max_fused_lenNone_gblFalse": 54.582573775771486,
+    "preds_ws10_st50.0_ea1.5_snks0_hopf_True_type_max_fused_lenNone_gblFalse": 54.511929854298934,
+    "preds_ws10_st50.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": 52.874167237165075,
+    "preds_ws5_st50.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": 56.53907853952135,
+    "preds_ws5_st50.0_ea1.5_snks0_hopf_True_type_max_fused_lenNone_gblFalse": 60.24629102333318,
+    "preds_ws10_st511.0_snks0_hopf_True_type_snapkv_lenNone_gblFalse": 61.79159295370357
+}

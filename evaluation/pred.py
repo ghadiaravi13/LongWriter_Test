@@ -25,6 +25,7 @@ def parse_args(args=None):
     parser.add_argument('--hopf_type', type=str, default="max_fused")
     parser.add_argument('--len', "-l", type=int, default=None)
     parser.add_argument("--window_size", "-ws", type=int, default=3, help="Window size for HopFormer")
+    parser.add_argument("--exhale_after", "-ea", type=float, default=1.0, help="Exhale after exceeding this times the KV limit")
     parser.add_argument("--sim_threshold", "-st", type=float, default=20.0, help="Similarity threshold for HopFormer")
     parser.add_argument("--num_attn_sinks", "-snks", type=float, default=0, help="Attention sinks (streaming LLM)")
     parser.add_argument("--gumbel", "-gbl", action='store_true', help="use gumbel softmax")
@@ -57,7 +58,8 @@ def get_pred(data, path, max_new_tokens, temperature, tokenizer, fout, args):
         'sim_threshold': int(args.sim_threshold),
         'softmax': 'gumbel' if args.gumbel else 'normal',
         'num_attn_sinks': int(args.num_attn_sinks),
-        'hopf_type': args.hopf_type
+        'hopf_type': args.hopf_type,
+        'exhale_after': args.exhale_after
     }
     print(f"Hopformer is: {config.hopformer}")
     if args.hopf_type=="snapkv":
@@ -125,9 +127,9 @@ if __name__ == '__main__':
     model_name = args.model#'LongWriter-glm4-9b' # LongWriter-llama3.1-8b
     path = model2path[model_name]#"THUDM/LongWriter-glm4-9b" # THUDM/LongWriter-llama3.1-8b
     os.makedirs(f"preds/{model_name}", exist_ok=True)
-    fout = open(f"preds/{model_name}/preds_ws{args.window_size}_st{args.sim_threshold}_snks{args.num_attn_sinks}_hopf_{not(args.no_hopf)}_type_{args.hopf_type}_len{args.len}_gbl{args.gumbel}.jsonl", 'w', encoding='utf-8')
+    fout = open(f"preds/{model_name}/preds_ws{args.window_size}_st{args.sim_threshold}_ea{args.exhale_after}_snks{args.num_attn_sinks}_hopf_{not(args.no_hopf)}_type_{args.hopf_type}_len{args.len}_gbl{args.gumbel}.jsonl", 'w', encoding='utf-8')
     
-    logfile = f"preds/{model_name}/preds_ws{args.window_size}_st{args.sim_threshold}_snks{args.num_attn_sinks}_hopf_{not(args.no_hopf)}_type_{args.hopf_type}_len{args.len}_gbl{args.gumbel}.log"
+    logfile = f"preds/{model_name}/preds_ws{args.window_size}_st{args.sim_threshold}_ea{args.exhale_after}_snks{args.num_attn_sinks}_hopf_{not(args.no_hopf)}_type_{args.hopf_type}_len{args.len}_gbl{args.gumbel}.log"
     logging.basicConfig(filename=logfile,
                     level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s',
