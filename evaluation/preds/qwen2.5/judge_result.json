@@ -8,6 +8,15 @@
         "Reading Experience": 58.47457627118644,
         "total": 68.07909604519774
     },
+    "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_sum_fused_lenNone_gblFalse": {
+        "Relevance": 92.5,
+        "Accuracy": 89.58333333333333,
+        "Coherence": 77.08333333333333,
+        "Clarity": 77.91666666666666,
+        "Breadth and Depth": 75.0,
+        "Reading Experience": 68.75,
+        "total": 80.13888888888887
+    },
     "preds_ws30_st630.0_ea1.0_snks0_hopf_True_type_snapkv_lenNone_gblFalse": {
         "Relevance": 86.01694915254237,
         "Accuracy": 68.64406779661016,
@@ -25,5 +34,14 @@
         "Breadth and Depth": 67.91666666666667,
         "Reading Experience": 57.08333333333333,
         "total": 67.29166666666667
+    },
+    "preds_ws20_st20.0_ea1.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": {
+        "Relevance": 88.75,
+        "Accuracy": 84.58333333333334,
+        "Coherence": 66.66666666666666,
+        "Clarity": 70.0,
+        "Breadth and Depth": 68.33333333333333,
+        "Reading Experience": 60.0,
+        "total": 73.05555555555556
     }
 }
