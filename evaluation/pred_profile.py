@@ -104,7 +104,8 @@ def get_pred(data, path, max_new_tokens, temperature, tokenizer, fout, args):
                             do_sample=True,
                             temperature=temperature
                         )[0]
-                    torch.save(tokenizer.convert_ids_to_tokens(output),f"/work/10198/ghadiaravi13/vista/HopFormer/LongWriter_Test/evaluation/preds/ws{args.window_size}_st{args.sim_threshold}_fused{args.hopf_type}_tokenized_seq.pt")
+                    os.makedirs("/work/10198/ghadiaravi13/vista/HopFormer/LongWriter_Test/evaluation/attn_wts/", exist_ok=True)    
+                    torch.save(tokenizer.convert_ids_to_tokens(output),f"/work/10198/ghadiaravi13/vista/HopFormer/LongWriter_Test/evaluation/attn_wts/qwen_ws{args.window_size}_st{args.sim_threshold}_fused{args.hopf_type}_tokenized_seq.pt")
                     response = tokenizer.decode(output[context_length:], skip_special_tokens=True)
                 else:
                     response, history = model.chat(tokenizer, prompt, history=[], max_new_tokens=max_new_tokens, temperature=temperature)

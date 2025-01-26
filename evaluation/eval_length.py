@@ -31,8 +31,9 @@ model_name = args.model
 res_path = f"preds/{model_name}/"
 result = {}
 for file in os.listdir(res_path):
-    if "json" not in file or "result" in file or "judge" in file:
+    if "json" not in file or "result" in file or "judge" in file or "profile" in file or "log" in file:
         continue
+    print(file)
     try:
         prediction = [json.loads(line) for line in open(f"{res_path}{file}", encoding='utf-8')]
     except json.JSONDecodeError as e:
