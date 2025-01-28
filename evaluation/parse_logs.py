@@ -19,6 +19,7 @@ def parse(args,dataset=""):
     if args.e:
         files = sorted(os.listdir(f"preds_e/{model}/"),key=lambda x: "hopf_False" not in x)
 
+    cache_mem = dict()
     for file in files:
         if ".log" in file and dataset in file:
             if args.e:
@@ -59,13 +60,21 @@ def parse(args,dataset=""):
                     # if "hopf_False" in file:
                     #     data[run_name]['attn_size'].append(4 * n_attn_heads * n_layers * data[run_name]['out_size'][i] * int(l.split("attn_wts': ")[1].split("}")[0]) / 1000000)
                     # else:
-                    data[run_name]['attn_size'].append(4 * n_attn_heads * n_layers * data[run_name]['resp_len'][i] * (int(l.split("attn_wts': ")[1].split(",")[0])!=0) / 1000000)
+                    if "h2o" not in run_name:
+                        try:
+                            data[run_name]['attn_size'].append(4 * n_key_heads * n_layers * int(l.split("key': ")[1].split(",")[0]) * int(l.split("attn_wts': ")[1].split(",")[0]) / 1000000)
+                        except ValueError: #for older logs, len is missing, so attn_wts is the last item
+                            data[run_name]['attn_size'].append(4 * n_key_heads * n_layers * int(l.split("key': ")[1].split(",")[0]) * int(l.split("attn_wts': ")[1].split("}")[0]) / 1000000)
+                    else:
+                        data[run_name]['attn_size'].append(4 * n_attn_heads * n_layers * int(l.split("key': ")[1].split(",")[0]) * int(l.split("attn_wts': ")[1].split(",")[0]) / 1000000)   
+
                     data[run_name]['total_cache'].append(data[run_name]['KV_size'][-1] + data[run_name]['attn_size'][-1])
                     last_time = curr_time
                     i+=1
             inp_size = data[run_name]['inp_size']
             out_size = data[run_name]['out_size']
-    return data
+            cache_mem[run_name] = sum(data[run_name]['total_cache'])/len(data[run_name]['total_cache'])
+    return data, cache_mem
 
 def main():
     # Set up argument parser
@@ -79,17 +88,29 @@ def main():
     
     # Convert file
     # try:
-    data = parse(args)
+    data, cache_mem = parse(args)
     df = pd.concat({k: pd.DataFrame(v) for k, v in data.items()}, axis=1)
+
+    judge_df = pd.read_csv(f"preds/{args.model}/judge_result.csv")
+    judge_df = judge_df.sort_values(by='Unnamed: 0', ascending=True)
+    # judge_df.index = judge_df['Unnamed: 0']
+    cache_mem = dict(sorted(cache_mem.items(),key=lambda x:x[0]))
+    judge_df['Cache'] = cache_mem.values()#[0]*judge_df.shape[0]
+    # for k,v in cache_mem.items():
+    #     judge_df.loc[k]['Cache'] = v
+    # for run_name,cache in cache_mem.items():
+    #     judge_df[judge_df["Unnamed: 0"]==run_name]['Cache'] = cache
+    # import pdb; pdb.set_trace()
+    judge_df.to_csv(f"preds/{args.model}/judge_result.csv",index=None)
 
     if args.e:
         with open(f"preds_e/{args.model}/parsed_log_data.json","w") as f:
             json.dump(data,f)
             try:
-                with pd.ExcelWriter(f"preds_e/parsed_log_data.xlsx",mode='a') as writer:
+                with pd.ExcelWriter(f"preds_e/parsed_log_data.xlsx",mode='a',if_sheet_exists='replace') as writer:
                     df.to_excel(writer,sheet_name=args.model)
             except FileNotFoundError:
-                with pd.ExcelWriter(f"preds_e/parsed_log_data.xlsx",mode='w') as writer:
+                with pd.ExcelWriter(f"preds_e/parsed_log_data.xlsx",mode='w',if_sheet_exists='replace') as writer:
                     df.to_excel(writer,sheet_name=args.model)
             print(f"Successfully parsed logs")
         f.close()
@@ -97,10 +118,10 @@ def main():
         with open(f"preds/{args.model}/parsed_log_data.json","w") as f:
             json.dump(data,f)
             try:
-                with pd.ExcelWriter(f"preds/parsed_log_data.xlsx",mode='a') as writer:
+                with pd.ExcelWriter(f"preds/parsed_log_data.xlsx",mode='a',if_sheet_exists='replace') as writer:
                     df.to_excel(writer,sheet_name=args.model)
             except FileNotFoundError:
-                with pd.ExcelWriter(f"preds/parsed_log_data.xlsx",mode='w') as writer:
+                with pd.ExcelWriter(f"preds/parsed_log_data.xlsx",mode='w',if_sheet_exists='replace') as writer:
                     df.to_excel(writer,sheet_name=args.model)
             print(f"Successfully parsed logs")
         f.close()
