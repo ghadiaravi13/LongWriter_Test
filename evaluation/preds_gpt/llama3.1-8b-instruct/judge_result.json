@@ -1,0 +1,56 @@
+{
+    "preds_ws3_st20.0_snks0_hopf_False_type_max_fused_lenNone_gblFalse": {
+        "Relevance": 84.05172413793103,
+        "Accuracy": 84.05172413793103,
+        "Coherence": 55.172413793103445,
+        "Clarity": 62.93103448275862,
+        "Breadth and Depth": 47.41379310344828,
+        "Reading Experience": 46.98275862068966,
+        "total": 63.433908045977006
+    },
+    "preds_ws30_st630.0_ea1.0_snks0_hopf_True_type_snapkv_lenNone_gblFalse": {
+        "Relevance": 86.66666666666667,
+        "Accuracy": 85.41666666666667,
+        "Coherence": 52.916666666666664,
+        "Clarity": 62.916666666666664,
+        "Breadth and Depth": 52.083333333333336,
+        "Reading Experience": 44.58333333333333,
+        "total": 64.09722222222221
+    },
+    "preds_ws50_st20.0_ea1.0_snks0_hopf_True_type_sum_fused_win_fix_lenNone_gblFalse": {
+        "Relevance": 83.03571428571428,
+        "Accuracy": 83.03571428571428,
+        "Coherence": 56.25,
+        "Clarity": 63.83928571428571,
+        "Breadth and Depth": 51.33928571428571,
+        "Reading Experience": 44.64285714285714,
+        "total": 63.69047619047618
+    },
+    "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_sum_fused_win_fix_lenNone_gblFalse": {
+        "Relevance": 84.91379310344827,
+        "Accuracy": 83.62068965517241,
+        "Coherence": 54.310344827586206,
+        "Clarity": 62.5,
+        "Breadth and Depth": 49.56896551724138,
+        "Reading Experience": 45.258620689655174,
+        "total": 63.362068965517246
+    },
+    "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_h2o_masked_lenNone_gblFalse": {
+        "Relevance": 85.16949152542372,
+        "Accuracy": 83.89830508474576,
+        "Coherence": 55.932203389830505,
+        "Clarity": 60.59322033898306,
+        "Breadth and Depth": 48.30508474576271,
+        "Reading Experience": 45.76271186440678,
+        "total": 63.27683615819209
+    },
+    "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": {
+        "Relevance": 83.88888888888889,
+        "Accuracy": 83.33333333333333,
+        "Coherence": 51.11111111111111,
+        "Clarity": 58.88888888888889,
+        "Breadth and Depth": 53.888888888888886,
+        "Reading Experience": 41.11111111111111,
+        "total": 62.03703703703703
+    }
+}

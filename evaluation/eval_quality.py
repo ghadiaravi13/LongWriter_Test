@@ -186,7 +186,7 @@ json.dump(result, open(f"preds/{model_name}/judge_result.json","w"), ensure_asci
 pd.DataFrame(result).transpose().to_csv(f"preds/{model_name}/judge_result.csv")
 
 score_df = pd.DataFrame(score_df)
-
+score_df['total'] = score_df[dims].sum(axis=1)/len(dims)
 # fig = px.scatter(score_df, x = 'resp_len', y=dims, color='id')
 for dim in dims:
     fig = px.histogram(score_df, x=dim, color='id')
@@ -194,3 +194,10 @@ for dim in dims:
     # Reduce opacity to see both histograms
     fig.update_traces(opacity=0.75)
     fig.write_html(f"preds/{model_name}/judge_scores_hist_{dim}.html")
+
+try:
+    with pd.ExcelWriter(f"preds/LW_score_data.xlsx",mode='a',if_sheet_exists='replace') as writer:
+        score_df.to_excel(writer,sheet_name=args.model)
+except FileNotFoundError:
+    with pd.ExcelWriter(f"preds/LW_score_data.xlsx",mode='w') as writer:
+        score_df.to_excel(writer,sheet_name=args.model)
