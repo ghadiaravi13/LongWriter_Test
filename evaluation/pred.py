@@ -25,6 +25,7 @@ def parse_args(args=None):
     parser.add_argument('--hopf_type', type=str, default="max_fused")
     parser.add_argument('--len', "-l", type=int, default=None)
     parser.add_argument("--window_size", "-ws", type=int, default=3, help="Window size for HopFormer")
+    parser.add_argument("--max_capacity", "-mc", type=int, default=1024, help="Window size for HopFormer")
     parser.add_argument("--exhale_after", "-ea", type=float, default=1.0, help="Exhale after exceeding this times the KV limit")
     parser.add_argument("--sim_threshold", "-st", type=float, default=20.0, help="Similarity threshold for HopFormer")
     parser.add_argument("--num_attn_sinks", "-snks", type=float, default=0, help="Attention sinks (streaming LLM)")
@@ -56,6 +57,7 @@ def get_pred(data, path, max_new_tokens, temperature, tokenizer, fout, args):
     config.hopformer = None if args.no_hopf or args.hopf_type=="snapkv" else {
         'window_size': int(args.window_size),
         'sim_threshold': int(args.sim_threshold),
+        'max_capacity': int(args.max_capacity),
         'softmax': 'gumbel' if args.gumbel else 'normal',
         'num_attn_sinks': int(args.num_attn_sinks),
         'hopf_type': args.hopf_type,
