@@ -2,11 +2,10 @@
     "preds_ws3_st20.0_ea1.0_snks0_hopf_False_type_max_fused_lenNone_gblFalse": 79.10700823712202,
     "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_sum_fused_lenNone_gblFalse": 73.97290874207802,
     "preds_ws30_st630.0_ea1.0_snks0_hopf_True_type_snapkv_lenNone_gblFalse": 79.10700823712202,
+    "preds_ws50_st20.0_ea1.0_snks0_hopf_True_type_sum_fused_win_fix_lenNone_gblFalse": 79.02683375547555,
+    "preds_ws30_mc630_ea1.0_snks0_hopf_True_type_sum_fused_rerun_lenNone_gblFalse": 77.64118623316064,
     "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_sum_fused_win_fix_lenNone_gblFalse": 74.97555262535757,
-    "preds_ws100_st20.0_ea1.0_snks0_hopf_True_type_sum_fused_debug_lenNone_gblFalse": 88.39347079037802,
-    "preds_ws50_st2.0_ea1.0_snks0_hopf_True_type_sum_debug_lenNone_gblFalse": NaN,
     "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_h2o_masked_lenNone_gblFalse": 83.06571455969133,
     "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": 76.99988002076552,
-    "preds_ws100_st2.0_ea1.0_snks0_hopf_True_type_sum_debug_lenNone_gblFalse": 88.39347079037802,
     "preds_ws20_st20.0_ea1.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": 84.31983559138783
 }

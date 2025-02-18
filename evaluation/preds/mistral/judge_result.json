@@ -35,6 +35,15 @@
         "Reading Experience": 76.25,
         "total": 80.90277777777777
     },
+    "preds_ws30_mc630_ea1.0_snks0_hopf_True_type_sum_fused_rerun_lenNone_gblFalse": {
+        "Relevance": 91.25000000000001,
+        "Accuracy": 85.83333333333334,
+        "Coherence": 80.83333333333333,
+        "Clarity": 83.74999999999999,
+        "Breadth and Depth": 59.583333333333336,
+        "Reading Experience": 72.5,
+        "total": 78.95833333333333
+    },
     "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_sum_fused_win_fix_lenNone_gblFalse": {
         "Relevance": 92.5,
         "Accuracy": 89.16666666666666,
