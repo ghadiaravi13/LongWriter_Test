@@ -53,6 +53,15 @@
         "Reading Experience": 57.08333333333333,
         "total": 61.52777777777777
     },
+    "preds_ws30_mc600_ea1.0_snks0_hopf_True_type_sum_fused_rerun_new_lenNone_gblFalse": {
+        "Relevance": 62.5,
+        "Accuracy": 80.0,
+        "Coherence": 70.41666666666667,
+        "Clarity": 75.0,
+        "Breadth and Depth": 41.25,
+        "Reading Experience": 58.75,
+        "total": 64.65277777777779
+    },
     "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": {
         "Relevance": 62.916666666666664,
         "Accuracy": 79.58333333333334,

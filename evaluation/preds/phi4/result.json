@@ -2,8 +2,10 @@
     "preds_ws3_st20.0_ea1.0_snks0_hopf_False_type_max_fused_lenNone_gblFalse": 60.0229794357638,
     "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_sum_fused_lenNone_gblFalse": 50.483083465486324,
     "preds_ws30_st630.0_ea1.0_snks0_hopf_True_type_snapkv_lenNone_gblFalse": 54.04195130247974,
+    "preds_ws50_st20.0_ea1.0_snks0_hopf_True_type_sum_fused_win_fix_lenNone_gblFalse": 52.43933427534929,
     "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_sum_fused_win_fix_lenNone_gblFalse": 47.60441486428892,
     "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_h2o_masked_lenNone_gblFalse": 49.66651883750339,
+    "preds_ws30_mc600_ea1.0_snks0_hopf_True_type_sum_fused_rerun_new_lenNone_gblFalse": 54.93787175346295,
     "preds_ws30_st20.0_ea1.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": 50.227383149191596,
     "preds_ws10_st60.0_ea1.0_snks0_hopf_True_type_max_fused_lenNone_gblFalse": 51.29351473996139
 }
